@@ -186,14 +186,14 @@
 						</div>
 					</section>
 <div class = "nicelist">
-<a href="#">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
-<a href="#">Lorem ipsum set dolor</a>
-<a href="#">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
-<a href="#">Lorem ipsum set dolor</a>
-<a href="#">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
-<a href="#">Lorem ipsum set dolor</a>
+<a href="#" id = "new">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
+<a href="#" id = "new">Lorem ipsum set dolor</a>
+<a href="#" id = "new">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
+<a href="#" id = "new">Lorem ipsum set dolor</a>
+<a href="#" id = "new">Lorem Elsass ipsum Oberschaeffolsheim Heineken</a>
+<a href="#" id = "new">Lorem ipsum set dolor</a>
 </div>
-<style>a, a:before {
+<style>#new, #new:before {
   transition: all .4s;
   
 }
@@ -201,10 +201,10 @@
   max-width: 500px;
   margin: 2em auto;
 }
-.nicelist:hover a {
+.nicelist:hover #new {
   opacity: .4;
 }
-a {
+#new {
   position: relative;
   display: block;
   max-width: 500px;
@@ -215,26 +215,26 @@ a {
   text-decoration: none;
   font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
 }
-a:before {
+#new:before {
   content: "";
   position: absolute;
   left:0; bottom:0; top:0;
   width: 20px;
   background: #7F8C9A;
 }
-a:nth-child(even):before {
+#new:nth-child(even):before {
   background: #34495E;
 }
-a + a {
+#new + #new {
   border-top: 2px solid #ededed;
 }
-.nicelist a:hover,
-.nicelist a:focus {
+.nicelist #new:hover,
+.nicelist #new:focus {
   opacity: 1;
   padding-left: 55px;
 }
-.nicelist a:hover:before,
-.nicelist a:focus:before {
+.nicelist #new:hover:before,
+.nicelist #new:focus:before {
   width: 30px;
 }
 	</style>
