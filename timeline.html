@@ -56,81 +56,84 @@
 				<!-- Main -->
 					<div id="main">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<center>
-  <h1 style="padding-top: 50px;">
-    Timeline
-  </h1>
-  <ul>
-    <li class="one">
-      Bullet Point
-    </li>
-    <li class="two">
-      Bullet Point
-    </li>
-     <li class="three">
-      Bullet Point
-    </li>
-    <li class="four">
-      Bullet Point
-    </li>
-    <li class="five">
-      Bullet Point
-    </li>
-     <li class="six">
-      Bullet Point
-    </li>
-  </ul>
-            </center>
+<div class="container">
+  <ol class="ordered-list">
+    <li>Overall .fw.png width: 1400 px.</li>
+    <li>Eye-Strain reducer (same as the container class in Bootstrap): 1230 px.</li>
+    <li>Overall grid size: 1170 px.</li>
+    <li>Gutter size: 30 px.</li>
+    <li>12 column grid size: 70 px.</li>
+    <li>6 column grid size: 170 px.</li>
+    <li>4 column grid size: 270 px.</li>
+    <li>3 column grid size: 370 px.</li>
+  </ol>
+</div>
             <style>
-              h1 {
-  color:#fff;
-  text-align: center;
-  font-size: 60px;
+            body {
+  background: #F5F5F5;
 }
 
-li {
-  color:#fff;
-  list-style:none;
-  position: relative;
-  padding-left:50px;
-  line-height: 2;
-  font-size:32px;
+.container {
+  width: 500px;
+  margin: auto;
+  padding: 10px 20px;
+  margin-top: 1em;  font-size: 14px;
+
 }
 
-li:before {
-  font-family:FontAwesome;
-  position: absolute;
-  left: 0;
-  color:#318ca0;
-  font-size:32px;
+ol.ordered-list {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */  font-size: 14px;
+
+}
+ol.ordered-list > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 10px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:4px 8px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #ccc;
+  font-size: 14px;
+
+    cursor: default
+}
+ol.ordered-list > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;  font-size: 14px;
+
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #ccc;
+    color:#fff;
+    background:#ccc;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
 }
 
-li.one:before {
-   content:"\f111"; 
-}
-li.two:before {
-   content:"\f00c";
-}
-li.three:before {
-   content:"\f10c";
-}
-li.four:before {
-   content:"\f004";
-}
-li.five:before {
-   content:"\f1e2";
-}
-li.six:before {
-   content:"\f0e7";
+ol.ordered-list > li:hover, ol > li:hover {
+	border-color: rgba(255,60,0,0.7);  font-size: 14px;
+
+ }
+
+ol.ordered-list > li:hover:before, ol > li:hover:before {
+
+	border-color: rgba(255,60,0,0.7);   font-size: 14px;
 }
 
-li:hover:before {
-  color:#fff;
-}
-		    
-ul li{
-padding-left:1.29em;
-}
+.ordered-list li ol,
+.ordered-list li ul {margin-top:5px;}
+.ordered-list ol ol li:last-child {margin-bottom:0;}
             </style>
 
 								<!-- Footer -->
